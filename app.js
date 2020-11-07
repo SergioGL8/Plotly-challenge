@@ -3,8 +3,8 @@ d3.json("data/samples.json").then((data) => {
     var names = data.names;
     console.log(data.metadata);
     var option = d3.selectAll("#selDataset");
-    Object.entries(names).forEach(([i,v]) => {
-        option.append("option").text(v);
+    Object.entries(names).forEach(([index,value]) => {
+        option.append("option").text(value);
     })
 })
 
