@@ -20,7 +20,9 @@ function Plot(nameID){
         var otuIds = samples.map(row => row.otu_ids);
         var otuIds = otuIds[samplesID].slice(0,10);
         var otuLabels = samples.map(row => row.otu_labels); 
-        var otuLabels = otuLabels[samplesID].slice(0,10); 
+        var otuLabels = otuLabels[samplesID].slice(0,10);
+
+        // Creating the Trace and adding attributes
         var trace = {
             x: sampleValues,
             y: otuIds.map(r => `OTU ${r}`),
@@ -28,6 +30,8 @@ function Plot(nameID){
             type:"bar",
             orientation:"h"
         }
+
+        // Plot the chart to a div tag with id "bar"
         Plotly.newPlot("bar", [trace]);
 
          // Make the bubble chart
