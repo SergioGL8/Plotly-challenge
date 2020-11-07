@@ -8,12 +8,13 @@ d3.json("data/samples.json").then((data) => {
     })
 })
 
-function makePlot(nameID){
-    d3.json("data/samples.json").then((data) =>{
+// Create a function that plots the .json using function arrow
+function Plot(nameID){
+    d3.json("data/samples.json").then((data) => {
         var samples = data.samples;
         var samplesID = samples.map(row => row.id).indexOf(nameID);
 
-        // Make the bar plot
+        // Making the bar plot
         var sampleValues = samples.map(row => row.sample_values);
         var sampleValues = sampleValues[samplesID].slice(0,10).reverse();
         var otuIds = samples.map(row => row.otu_ids);
@@ -22,7 +23,7 @@ function makePlot(nameID){
         var otuLabels = otuLabels[samplesID].slice(0,10); 
         var trace = {
             x: sampleValues,
-            y: otuIds.map(r => `UTO ${r}`),
+            y: otuIds.map(r => `OTU ${r}`),
             text: otuLabels,
             type:"bar",
             orientation:"h"
@@ -102,5 +103,5 @@ function makePlot(nameID){
  
  // Make new plots if ID changed
 function optionChanged(newId) {
-    makePlot(newId);
+    Plot(newId);
 }
