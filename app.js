@@ -48,17 +48,17 @@ function Plot(nameID){
          var linearsc = d3.scaleLinear()
             .domain([min, max])
             .range([0, 1]);
-         var colors = otuId.map(val => d3.interpolateRgbBasis(["royalblue", "greenyellow", "goldenrod"])(linearsc(val)));
+         var bubbleColors = otuId.map(val => d3.interpolateRgbBasis(["red", "blue", "lawngreen"])(linearsc(val)));
          
          // Creating the Trace and adding attributes
          var trace1 = {
              x: otuId,
-             y: sampleValue,
+             y: otuValue,
              text: otuLabel,
              mode: "markers",
              marker: {
-                 color: colors,
-                 size: sampleValue.map(x => x*10),
+                 color: bubbleColors,
+                 size: otuValue.map(x => x*10),
                  sizemode: "area"
              }
          };
@@ -72,6 +72,8 @@ function Plot(nameID){
                  }
              },
          };
+         
+         // Plot the chart to a div tag with id "bubble"
          Plotly.newPlot("bubble", [trace1], bubbleLayout);
         
          // Make the gauge chart 
