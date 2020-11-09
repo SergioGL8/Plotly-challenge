@@ -85,7 +85,9 @@ function Plot(nameID){
                  title: { text: "Belly Button Washing Frequency <br>Scrubs per Week" },
                  type: "indicator",
                  mode: "gauge+number",
-                 gauge: { axis: { range: [null, 9] },
+                 gauge: { axis: { range: [null, 9],
+                            tickvals: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+                            ticks: "outside" },
                  bar:{color: "darkblue"},
                     steps: [
                      { range: [0, 1], color: "rgba(237, 240, 240, 1)"},
