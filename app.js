@@ -101,10 +101,10 @@ function Plot(nameID){
              }
          ];
          
-         var gaugeLayout = { width: 600, height: 500};
+         var Layout = { width: 600, height: 500};
 
          // Plot the chart to a div tag with id "gauge"
-         Plotly.newPlot("gauge", newData, gaugeLayout);
+         Plotly.newPlot("gauge", newData, Layout);
 
          // Making and displaying the meta info to a div tag with id "sample-metadata"
          var metadata = d3.select("#sample-metadata");
