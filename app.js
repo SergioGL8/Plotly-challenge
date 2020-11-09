@@ -13,7 +13,7 @@ function Plot(nameID){
     d3.json("data/samples.json").then((data) => {
         var samples = data.samples;
         var samplesID = samples.map(row => row.id).indexOf(nameID);
-
+        
         // Making the bar plot
         var sampleValues = samples.map(row => row.sample_values);
         var sampleValues = sampleValues[samplesID].slice(0,10).reverse();
@@ -103,10 +103,10 @@ function Plot(nameID){
          
          var gaugeLayout = { width: 600, height: 500};
 
-         
+         // Plot the chart to a div tag with id "gauge"
          Plotly.newPlot("gauge", newData, gaugeLayout);
 
-         // Make the meta info
+         // Making and displaying the meta info to a div tag with id "sample-metadata"
          var metadata = d3.select("#sample-metadata");
          metadata.html('');
          Object.entries(meta[samplesID]).forEach(([k,v]) => {
@@ -115,7 +115,7 @@ function Plot(nameID){
      })
  }
  
- // Make new plots if ID changed
+ // Making new plots if ID changed
 function optionChanged(newId) {
     Plot(newId);
 }
