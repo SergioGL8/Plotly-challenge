@@ -115,7 +115,7 @@ function Plot(nameID){
      })
  }
  
- // Making new plots if ID changed
+ // Submit Button handler and make new plots if ID changed
 function optionChanged(newId) {
     Plot(newId);
 }
