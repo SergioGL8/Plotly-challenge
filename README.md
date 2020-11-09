@@ -1,5 +1,17 @@
 # Plot.ly Homework - Belly Button Biodiversity
 
+# Interactive Visualization
+## Contributor
+* Sergio Guarneros Luna
+
+---
+Table of contents <a name="toc"></a>
+
+1. [Instructions](#1)
+2. [Visualization](#2)
+
+---
+
 ![Bacteria by filterforge.com](Images/bacteria.jpg)
 
 In this assignment, you will build an interactive dashboard to explore the [Belly Button Biodiversity dataset](http://robdunnlab.com/projects/belly-button-biodiversity/), which catalogs the microbes that colonize human navels.
@@ -52,5 +64,19 @@ The following task is advanced and therefore optional.
 Hulcr, J. et al.(2012) _A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable_. Retrieved from: [http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/](http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/)
 
 - - -
+
+
+### Visualization <a name="2"></a>
+#### Interactive dashboard
+<sub><sup>[Go back to the table of contents](#toc)</sub></sup>
+
+##### Files
+
+* index.html -- Belly Button Biodiversity dashboard.
+* app.js -- JavaScript for index.html webpage functionality.
+* data/samples.json -- Sample values used as input for the graphics in the dashboard.
+
+##### Screenshot dashboard
+![Dashboard screenshot](screenshot_dashboard.jpg)
 
 © 2019 Trilogy Education Services
