@@ -78,5 +78,5 @@ Hulcr, J. et al.(2012) _A Jungle in There: Bacteria in Belly Buttons are Highly 
 * data/samples.json -- Sample values used as input for the graphics in the dashboard.
 
 ##### Screenshot dashboard
-![Dashboard screenshot1](screenshot.png)
+![Dashboard screenshot](screenshot1.png)
 
