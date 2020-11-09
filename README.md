@@ -11,6 +11,8 @@ Table of contents <a name="toc"></a>
 2. [Visualization](#2)
 
 ---
+### Instructions <a name="1"></a>
+<sub><sup>[Go back to the table of contents](#toc)</sub></sup>
 
 ![Bacteria by filterforge.com](Images/bacteria.jpg)
 
@@ -67,7 +69,6 @@ Hulcr, J. et al.(2012) _A Jungle in There: Bacteria in Belly Buttons are Highly 
 
 
 ### Visualization <a name="2"></a>
-#### Interactive dashboard
 <sub><sup>[Go back to the table of contents](#toc)</sub></sup>
 
 ##### Files
@@ -79,4 +80,3 @@ Hulcr, J. et al.(2012) _A Jungle in There: Bacteria in Belly Buttons are Highly 
 ##### Screenshot dashboard
 ![Dashboard screenshot](screenshot_dashboard.jpg)
 
-© 2019 Trilogy Education Services
