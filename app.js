@@ -43,10 +43,14 @@ function Plot(nameID){
          var otuLabel = otuLabel[samplesID];
          var min = d3.min(otuId);
          var max = d3.max(otuId);
-         var mapNr = d3.scaleLinear()
+
+         // Configure a linear scale with a range between the 0 and 1 and the domain between min and the max of the samples
+         var linearsc = d3.scaleLinear()
             .domain([min, max])
             .range([0, 1]);
-         var colors = otuId.map(val => d3.interpolateRgbBasis(["royalblue", "greenyellow", "goldenrod"])(mapNr(val)));
+         var colors = otuId.map(val => d3.interpolateRgbBasis(["royalblue", "greenyellow", "goldenrod"])(linearsc(val)));
+         
+         // Creating the Trace and adding attributes
          var trace1 = {
              x: otuId,
              y: sampleValue,
