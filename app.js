@@ -82,7 +82,7 @@ function Plot(nameID){
              {
                  domain: { x: [0, 1], y: [0, 1] },
                  value: meta[samplesID].wfreq,
-                 title: { text: "Belly Button Washing Frequency <br>Scrubs per Week" },
+                 title: { text: "Belly Button Washing Frequency <br> Scrubs per Week" },
                  type: "indicator",
                  mode: "gauge+number",
                  gauge: { axis: { range: [null, 9],
