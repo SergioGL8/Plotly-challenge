@@ -109,8 +109,8 @@ function Plot(nameID){
          // Making and displaying the meta info to a div tag with id "sample-metadata"
          var metadata = d3.select("#sample-metadata");
          metadata.html('');
-         Object.entries(meta[samplesID]).forEach(([k,v]) => {
-             metadata.append('p').text(`${k.toUpperCase()}:\n${v}`);
+         Object.entries(meta[samplesID]).forEach(([key,value]) => {
+             metadata.append('p').text(`${key.toUpperCase()}:\n${value}`);
          })
      })
  }
