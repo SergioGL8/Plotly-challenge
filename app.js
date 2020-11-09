@@ -76,9 +76,9 @@ function Plot(nameID){
          // Plot the chart to a div tag with id "bubble"
          Plotly.newPlot("bubble", [trace1], bubbleLayout);
         
-         // Make the gauge chart 
+         // Making the gauge chart 
          var meta = data.metadata;
-         var data1 = [
+         var newData = [
              {
                  domain: { x: [0, 1], y: [0, 1] },
                  value: meta[samplesID].wfreq,
@@ -86,23 +86,25 @@ function Plot(nameID){
                  type: "indicator",
                  mode: "gauge+number",
                  gauge: { axis: { range: [null, 9] },
-                 bar:{color: "orange"},
+                 bar:{color: "darkblue"},
                     steps: [
-                     { range: [0, 1], color: "rgba(248, 243, 236, 1)"},
-                     { range: [1, 2], color: "rgba(244, 241, 228, 1)"},
-                     { range: [2, 3], color: "rgba(233, 230, 201, 1)"},
-                     { range: [3, 4], color: "rgba(229, 232, 176, 1)"},
-                     { range: [4, 5], color: "rgba(213, 229, 153, 1)"},
-                     { range: [5, 6], color: "rgba(183, 205, 143, 1)"},
-                     { range: [6, 7], color: "rgba(138, 192, 134, 1)"},
-                     { range: [7, 8], color: "rgba(136, 188, 141, 1)"},
-                     { range: [8, 9], color: "rgba(132, 181, 136, 1)"}
+                     { range: [0, 1], color: "rgba(237, 240, 240, 1)"},
+                     { range: [1, 2], color: "rgba(218, 220, 220, 1)"},
+                     { range: [2, 3], color: "rgba(208, 209, 209, 1)"},
+                     { range: [3, 4], color: "rgba(187, 205, 202, 1)"},
+                     { range: [4, 5], color: "rgba(177, 205, 200, 1)"},
+                     { range: [5, 6], color: "rgba(165, 206, 198, 1)"},
+                     { range: [6, 7], color: "rgba(149, 209, 196, 1)"},
+                     { range: [7, 8], color: "rgba(129, 214, 197, 1)"},
+                     { range: [8, 9], color: "rgba(63, 212, 181, 1)"}
                    ]}
              }
          ];
          
          var gaugeLayout = { width: 600, height: 500};
-         Plotly.newPlot("gauge", data1, gaugeLayout);
+
+         
+         Plotly.newPlot("gauge", newData, gaugeLayout);
 
          // Make the meta info
          var metadata = d3.select("#sample-metadata");
