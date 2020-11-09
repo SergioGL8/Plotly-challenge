@@ -34,16 +34,18 @@ function Plot(nameID){
         // Plot the chart to a div tag with id "bar"
         Plotly.newPlot("bar", [trace]);
 
-         // Make the bubble chart
-         var sampleValue = samples.map(row => row.sample_values);
-         var sampleValue = sampleValue[samplesID];
+         // Making the bubble chart
+         var otuValue = samples.map(row => row.sample_values);
+         var otuValue = otuValue[samplesID];
          var otuId = samples.map(row => row.otu_ids);
          var otuId = otuId[samplesID];
          var otuLabel = samples.map(row => row.otu_labels); 
          var otuLabel = otuLabel[samplesID];
-         var minId = d3.min(otuId);
-         var maxId = d3.max(otuId);
-         var mapNr = d3.scaleLinear().domain([minId, maxId]).range([0, 1]);
+         var min = d3.min(otuId);
+         var max = d3.max(otuId);
+         var mapNr = d3.scaleLinear()
+            .domain([min, max])
+            .range([0, 1]);
          var colors = otuId.map(val => d3.interpolateRgbBasis(["royalblue", "greenyellow", "goldenrod"])(mapNr(val)));
          var trace1 = {
              x: otuId,
